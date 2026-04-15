@@ -690,12 +690,46 @@
                 <button class="btn-initiative" style="width: 100%; margin-top: 20px;" onclick="proceedToForm()">ACKNOWLEDGE</button>
             </div>
 
-            <form id="vayu-requisition-form" style="display:none;">
-                <div class="input-group"><label>Name</label><input type="text" name="name" required></div>
-                <div class="input-group"><label>Reg No.</label><input type="text" name="reg_no" required></div>
-                <div class="input-group"><label>Email</label><input type="email" name="email" required></div>
-                <div class="input-group"><label>Drive Link (CV)</label><input type="url" name="cv_link" required placeholder="https://drive.google.com/..."></div>
-                <button type="submit" class="btn-initiative" style="width: 100%;">TRANSMIT DATA</button>
+          <form id="vayu-requisition-form" style="display:none;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="input-group">
+                        <label>Name</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Reg No.</label>
+                        <input type="text" name="reg_no" required>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Mobile No.</label>
+                        <input type="tel" name="phone" required>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="input-group">
+                        <label>Course</label>
+                        <input type="text" name="course" placeholder="e.g. B.Tech CSE (AI/ML)" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Year</label>
+                        <input type="number" name="year" placeholder="1-4" min="1" max="5" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Drive Link (CV / Solution Protocol)</label>
+                    <input type="url" name="cv_link" required placeholder="https://drive.google.com/...">
+                </div>
+
+                <button type="submit" class="btn-initiative" style="width: 100%; margin-top: 10px;">TRANSMIT DATA</button>
             </form>
 
             <div id="success-message" style="display:none; text-align: center;">
